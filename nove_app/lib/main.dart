@@ -6,25 +6,17 @@ void main() => runApp(MaterialApp(
 ));
 
 
-//static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-//widget list
-List<Widget> _widgetOptions = <Widget>[
-  Text(
-    'Index 0: Home',
-    //style: optionStyle,
-  ),
-  Text(
-    'Index 1: Business',
-    //style: optionStyle,
-  ),
-  Text(
-    'Index 2: School',
-    //style: optionStyle,
-  ),
-  Text(
-    'Index 3: Settings',
-    //style: optionStyle,
-  ),
+class Destination {
+  const Destination(this.title, this.icon, this.color);
+  final String title;
+  final IconData icon;
+  final MaterialColor color;
+}
+
+const List<Destination> allDestinations = <Destination>[
+  Destination('Home', Icons.home, Colors.blue),
+  Destination('Tutorial', Icons.assistant, Colors.blue),
+  Destination('Settings', Icons.settings, Colors.blue)
 ];
 
 //bottom navigation index tracker
@@ -130,7 +122,7 @@ class Home extends StatelessWidget {
                         child: Column(
                           children: <Widget> [
                             Container(height: 10.0,),
-                            Image.asset('assets/images/flood.png', height: 80.0, width: 80.0,),
+                            Image.asset('assets/images/report.png', height: 80.0, width: 80.0,),
                             Container(height: 10.0,),
                             Text("Report"),
                           ],
@@ -197,13 +189,13 @@ class Home extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  height: 25.0,
+                  height: 30.0,
                 ),
                 new GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, "myRoute");
                   },
-                  child: new Text("About Us",),
+                  child: new Text("About Us", style: new TextStyle(color: Color(0xff0156B0),),),
                 ),
                 Container(
                   height: 25.0,
@@ -212,7 +204,7 @@ class Home extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, "myRoute");
                   },
-                  child: new Text("Terms and Conditions",),
+                  child: new Text("Terms and Conditions",style: new TextStyle(color: Color(0xff0156B0),),),
                 ),
               ],
             ),
@@ -228,7 +220,7 @@ class Home extends StatelessWidget {
             title: Text('Home'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.assistant),
             title: Text('Tutorial'),
           ),
           BottomNavigationBarItem(
