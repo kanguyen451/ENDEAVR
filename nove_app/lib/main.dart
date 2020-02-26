@@ -46,7 +46,6 @@ class Home extends StatelessWidget {
       backgroundColor: Color(0xffF9F8F8),
       appBar: AppBar(
         title: Text("NOVE"),
-        centerTitle: true,
         backgroundColor: Color(0xff2389FF),
       ),
 
@@ -133,7 +132,7 @@ class Home extends StatelessWidget {
                             Container(height: 10.0,),
                             Image.asset('assets/images/flood.png', height: 80.0, width: 80.0,),
                             Container(height: 10.0,),
-                            Text("Flood"),
+                            Text("Report"),
                           ],
                         ),
                         padding: EdgeInsets.all(10.0),
