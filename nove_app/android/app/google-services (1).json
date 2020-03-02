@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "980838991418",
+    "firebase_url": "https://nolanville-app.firebaseio.com",
+    "project_id": "nolanville-app",
+    "storage_bucket": "nolanville-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980838991418:android:b1dc7989c4a064c8e79703",
+        "android_client_info": {
+          "package_name": "edumisskim451endeavr.tamu.people.nove_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980838991418-cmu8fqtmvd0pkf0ee2hbvjtmar95kaq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC04jzVdidkuuJHUz972z-9EDwC4LZb3IE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980838991418-cmu8fqtmvd0pkf0ee2hbvjtmar95kaq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
