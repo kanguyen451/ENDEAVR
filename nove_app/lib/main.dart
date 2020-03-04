@@ -138,11 +138,14 @@ class Home extends StatelessWidget {
                         color: Colors.white,
                         child: Column(
 <<<<<<< HEAD
+<<<<<<< HEAD
                           children: <Widget> [
                             Container(height: 10.0,),
                             Image.asset('assets/images/report.png', height: 80.0, width: 80.0,),
                             Container(height: 10.0,),
 =======
+=======
+>>>>>>> Merging with master
                           children: <Widget>[
                             Container(
                               height: 10.0,
@@ -155,7 +158,10 @@ class Home extends StatelessWidget {
                             Container(
                               height: 10.0,
                             ),
+<<<<<<< HEAD
 >>>>>>> 8773986fddc72656cce0f42a2d12427799a4dfb7
+=======
+>>>>>>> Merging with master
                             Text("Report"),
                           ],
                         ),
