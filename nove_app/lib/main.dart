@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:nove_app/report.dart';
+import 'package:nove_app/alerts.dart';
 
 //main function for landing page
-void main() => runApp(MaterialApp(
-  home: Home(),
-));
-
+void main() => runApp(MaterialApp(routes: {
+      '/': (context) => Home(),
+      '/report': (context) => Report(),
+      '/alerts': (context) => Alerts(),
+    }));
 
 class Destination {
   const Destination(this.title, this.icon, this.color);
@@ -27,7 +30,7 @@ void _onItemTapped(int index) {
   print(index);
 }
 
-void printHello(){
+void printHello() {
   print("Hello world");
 }
 
@@ -37,12 +40,11 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xffF9F8F8),
       appBar: AppBar(
-        title: Text("NOVE"),
+        title: Center(child: Text("NOVE")),
         backgroundColor: Color(0xff2389FF),
       ),
 
-      body:
-      Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -61,13 +63,20 @@ class Home extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     new Container(
-                      width: MediaQuery.of(context).size.width*0.8,
-                      child: new Text("WELCOME AND BE PREPARED", textAlign: TextAlign.center, style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold,)),
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      child: new Text("WELCOME AND BE PREPARED",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          )),
                     ),
                     new Container(
                       padding: EdgeInsets.fromLTRB(0, 5.0, 0, 0),
-                      width: MediaQuery.of(context).size.width*0.8,
-                      child: Text("NOVE sends you notifications when there is an incoming train, flood warnings, etc. Our goal is to keep the city of Nolanville safe.", ),
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      child: Text(
+                        "NOVE sends you notifications when there is an incoming train, flood warnings, etc. Our goal is to keep the city of Nolanville safe.",
+                      ),
                     ),
                   ],
                 ),
@@ -79,7 +88,7 @@ class Home extends StatelessWidget {
           //buttons container
           Container(
             child: Column(
-              children: <Widget> [
+              children: <Widget>[
                 Container(
                   height: 40.0,
                 ),
@@ -91,15 +100,22 @@ class Home extends StatelessWidget {
                     new SizedBox(
                       width: 140.0,
                       height: 140.0,
-                      child:
-                      new RaisedButton(
+                      child: new RaisedButton(
                         onPressed: printHello,
                         color: Colors.white,
                         child: Column(
-                          children: <Widget> [
-                            Container(height: 10.0,),
-                            Image.asset('assets/images/train.png', height: 80.0, width: 80.0,),
-                            Container(height: 10.0,),
+                          children: <Widget>[
+                            Container(
+                              height: 10.0,
+                            ),
+                            Image.asset(
+                              'assets/images/train.png',
+                              height: 80.0,
+                              width: 80.0,
+                            ),
+                            Container(
+                              height: 10.0,
+                            ),
                             Text("Train"),
                           ],
                         ),
@@ -115,15 +131,31 @@ class Home extends StatelessWidget {
                     new SizedBox(
                       width: 140.0,
                       height: 140.0,
-                      child:
-                      new RaisedButton(
-                        onPressed: printHello,
+                      child: new RaisedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/report');
+                        },
                         color: Colors.white,
                         child: Column(
+<<<<<<< HEAD
                           children: <Widget> [
                             Container(height: 10.0,),
                             Image.asset('assets/images/report.png', height: 80.0, width: 80.0,),
                             Container(height: 10.0,),
+=======
+                          children: <Widget>[
+                            Container(
+                              height: 10.0,
+                            ),
+                            Image.asset(
+                              'assets/images/flood.png',
+                              height: 80.0,
+                              width: 80.0,
+                            ),
+                            Container(
+                              height: 10.0,
+                            ),
+>>>>>>> 8773986fddc72656cce0f42a2d12427799a4dfb7
                             Text("Report"),
                           ],
                         ),
@@ -135,7 +167,9 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
-                Container(height:20.0,),
+                Container(
+                  height: 20.0,
+                ),
                 new Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -144,16 +178,25 @@ class Home extends StatelessWidget {
                     new SizedBox(
                       width: 140.0,
                       height: 140.0,
-                      child:
-                      new RaisedButton(
-                        onPressed: printHello,
+                      child: new RaisedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/alerts');
+                        },
                         color: Colors.white,
                         child: Column(
-                          children: <Widget> [
-                            Container(height: 10.0,),
-                            Image.asset('assets/images/alert.png', height: 80.0, width: 80.0,),
-                            Container(height: 10.0,),
-                            Text("Alert"),
+                          children: <Widget>[
+                            Container(
+                              height: 10.0,
+                            ),
+                            Image.asset(
+                              'assets/images/alert.png',
+                              height: 80.0,
+                              width: 80.0,
+                            ),
+                            Container(
+                              height: 10.0,
+                            ),
+                            Text("Alerts"),
                           ],
                         ),
                         padding: EdgeInsets.all(10.0),
@@ -168,15 +211,22 @@ class Home extends StatelessWidget {
                     new SizedBox(
                       width: 140.0,
                       height: 140.0,
-                      child:
-                      new RaisedButton(
+                      child: new RaisedButton(
                         onPressed: printHello,
                         color: Colors.white,
                         child: Column(
-                          children: <Widget> [
-                            Container(height: 10.0,),
-                            Image.asset('assets/images/list.png', height: 80.0, width: 80.0,),
-                            Container(height: 10.0,),
+                          children: <Widget>[
+                            Container(
+                              height: 10.0,
+                            ),
+                            Image.asset(
+                              'assets/images/list.png',
+                              height: 80.0,
+                              width: 80.0,
+                            ),
+                            Container(
+                              height: 10.0,
+                            ),
                             Text("Alert History"),
                           ],
                         ),
@@ -195,7 +245,13 @@ class Home extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, "myRoute");
                   },
+<<<<<<< HEAD
                   child: new Text("About Us", style: new TextStyle(color: Color(0xff0156B0),),),
+=======
+                  child: new Text(
+                    "About Us",
+                  ),
+>>>>>>> 8773986fddc72656cce0f42a2d12427799a4dfb7
                 ),
                 Container(
                   height: 25.0,
@@ -204,12 +260,17 @@ class Home extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, "myRoute");
                   },
+<<<<<<< HEAD
                   child: new Text("Terms and Conditions",style: new TextStyle(color: Color(0xff0156B0),),),
+=======
+                  child: new Text(
+                    "Terms and Conditions",
+                  ),
+>>>>>>> 8773986fddc72656cce0f42a2d12427799a4dfb7
                 ),
               ],
             ),
           ),
-
         ],
       ),
 
