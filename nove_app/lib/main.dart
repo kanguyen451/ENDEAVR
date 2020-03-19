@@ -137,18 +137,6 @@ class Home extends StatelessWidget {
                         },
                         color: Colors.white,
                         child: Column(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          children: <Widget> [
-                            Container(height: 10.0,),
-                            Image.asset('assets/images/report.png', height: 80.0, width: 80.0,),
-                            Container(height: 10.0,),
-=======
-=======
->>>>>>> Merging with master
-=======
->>>>>>> 186b2b41dcc2fccaa73d2b3da3efe34780b36cd7
                           children: <Widget>[
                             Container(
                               height: 10.0,
@@ -161,13 +149,6 @@ class Home extends StatelessWidget {
                             Container(
                               height: 10.0,
                             ),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8773986fddc72656cce0f42a2d12427799a4dfb7
-=======
->>>>>>> Merging with master
-=======
->>>>>>> 186b2b41dcc2fccaa73d2b3da3efe34780b36cd7
                             Text("Report"),
                           ],
                         ),
@@ -257,13 +238,7 @@ class Home extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, "myRoute");
                   },
-<<<<<<< HEAD
                   child: new Text("About Us", style: new TextStyle(color: Color(0xff0156B0),),),
-=======
-                  child: new Text(
-                    "About Us",
-                  ),
->>>>>>> 8773986fddc72656cce0f42a2d12427799a4dfb7
                 ),
                 Container(
                   height: 25.0,
@@ -272,13 +247,7 @@ class Home extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, "myRoute");
                   },
-<<<<<<< HEAD
                   child: new Text("Terms and Conditions",style: new TextStyle(color: Color(0xff0156B0),),),
-=======
-                  child: new Text(
-                    "Terms and Conditions",
-                  ),
->>>>>>> 8773986fddc72656cce0f42a2d12427799a4dfb7
                 ),
               ],
             ),
