@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nove_app/report.dart';
 import 'package:nove_app/alerts.dart';
+import 'package:flutter/widgets.dart';
 
 //main function for landing page
 void main() => runApp(MaterialApp(routes: {
